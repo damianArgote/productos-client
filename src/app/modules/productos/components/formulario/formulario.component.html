@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Formulario Producto</h2>
+<mat-dialog-content class="mat-typography">
+  <app-formly
+    [model]="model"
+    [fields]="fields"
+    (submit)="onSubmit()"
+    [textButton]="textButton"
+  ></app-formly>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

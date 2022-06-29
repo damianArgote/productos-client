@@ -1,0 +1,27 @@
+<mat-drawer-container class="example-container" autosize>
+  <button
+    class="m-2"
+    type="button"
+    mat-mini-fab
+    color="primary"
+    (click)="drawer.toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <h2>Menu</h2>
+    <mat-selection-list
+      #items
+      [multiple]="false"
+      (selectionChange)="getItem($event)"
+    >
+      <mat-list-option *ngFor="let item of menuItems" [value]="item">
+        {{ item }}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

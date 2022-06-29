@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-10">
+    <ag-grid-angular
+      *ngIf="columnDefs.length > 0"
+      style="width: 100%; min-height: 150px"
+      class="ag-theme-alpine table"
+      domLayout="autoHeight"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [pagination]="true"
+      [paginationPageSize]="10"
+    >
+    </ag-grid-angular>
+  </div>
+</div>
